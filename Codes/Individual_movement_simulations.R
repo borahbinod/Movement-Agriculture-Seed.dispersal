@@ -25,12 +25,12 @@ estGammaParams<- function(mu,var){
   return(gamma.params)
 }
 
-lscp<- raster("Rasters/landscapes/frag_landscape_0.1_50.tif")
+lscp<- raster("Data_derived/frag_landscape_0.1_50.tif") # input artificial landscape
 plot(lscp)
 df<- as.data.frame(lscp,xy=T)
 colnames(df)<- c("x","y","habitat")
 df$id<- 1:nrow(df)
-start_pops<- read.csv("Rasters/landscapes/start_pops.csv",header = T)
+start_pops<- read.csv("Data_derived/start_pops.csv",header = T) # start locations for movement simulations
 xid<- start_pops$id
 df[xid,"habitat"]<- 1
 
@@ -41,11 +41,11 @@ gridded(spg)<- TRUE
 lscp<- raster(spg)
 plot(lscp)
 points(start_pops[,c("x","y")],pch=19)
-est.data<- read.csv("Output/Estimates.csv",header=T)
+est.data<- read.csv("Data_derived/Estimates.csv",header=T) # input estimates of habitat selection and behavior mode
 est<- est.data %>% filter(Habitat %in% c("Specialist"))
 
 ### GRT in minutes, sd: 10 min
-grt_data<- read.csv("Output/grt.csv",header=T)
+grt_data<- read.csv("Data_derived/grt.csv",header=T) # input gut retetion time
 
 ## adjust the scale; h to reflect real movement;
 ## adjust the conc. parameter, r to reflect real movement
@@ -163,7 +163,4 @@ mp_gl<- rbind(mp_df,mp_al)
 write.csv(mp_gl,"Data_derived/new/mp_fragments_05.csv",row.names = F)
 
 
-x1<- data.frame(pr=gn_tvl_mat,group="Matrix")
-x2<- data.frame(pr=gn_tvl_hab,group="Habitat")
-x<- rbind(x1,x2)
-kruskal.test(pr~group,data=x)
+
