@@ -11,8 +11,9 @@ Movement-Agriculture-Seed.dispersal
 │   └── Afrotropical_bird.csv
 │
 ├── Data_derived
-│   └── 
-│
+│  ├── start_pops.csv
+│  └── movement&behavior_estimates.csv
+│  └── frag_landscape_0.1_50.tif
 ├── Output
 │   └── mean_metrics.csv
 │
