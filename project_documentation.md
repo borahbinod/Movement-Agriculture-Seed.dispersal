@@ -2,14 +2,15 @@
 
 ## Project Overview
 
-This project investigates how agricultural landscapes influence animal movement and the resulting seed dispersal patterns. Using simulated landscapes and individual-based movement models, the project evaluates how varying levels of agricultural cover affect movement trajectories and seed deposition across landscapes.
+This project investigates how agricultural landscapes influence animal movement and the resulting seed dispersal patterns. Using simulated landscapes and individual-based movement models, the project evaluates how varying levels of riparian forest cover and fragmentation affect individual movement trajectories and behavior, and seed deposition across landscapes.
 
 ### Objectives
 
-1. Simulate landscapes with varying agricultural cover.
-2. Simulate movement of seed-dispersing birds across landscapes.
-3. Quantify resulting seed dispersal patterns.
-4. Evaluate how agricultural expansion alters dispersal processes.
+1. Simulate landscapes with varying forest cover and fragmentation.
+2. Simulate the movement of seed-dispersing birds across landscapes, accounting for their
+   habitat preferences as well as propensity to travel or forage/rest in different habitats.
+3. Simulate seed depositions resulting from movement and quantify resulting seed dispersal patterns.
+4. Evaluate how forest loss and fragmentation alter dispersal processes.
 
 ---
 
@@ -97,7 +98,7 @@ Used as input for movement simulations and dispersal parameterization.
 
 ### Purpose
 
-Generate simulated landscapes representing different levels of agricultural development.
+Generate simulated landscapes representing different levels of forest loss and fragmentation.
 
 ### Inputs
 
@@ -115,13 +116,13 @@ Data_derived/
 
 1. Create landscape grid.
 2. Assign habitat classes.
-3. Vary proportion of agricultural cover.
+3. Vary proportion of forest cover and degree of fragmentation.
 4. Calculate landscape characteristics.
 5. Save simulated landscapes.
 
 ### Ecological Interpretation
 
-Agricultural expansion alters habitat availability and connectivity, potentially affecting animal movement and seed dispersal.
+Forest loss and fragmentation alter habitat availability and connectivity, potentially affecting animal movement, behavior, and seed dispersal.
 
 ---
 
