@@ -20,17 +20,18 @@ This project investigates how agricultural landscapes influence animal movement 
 Movement-Agriculture-Seed.dispersal
 │
 ├── Codes
-│   ├── landscape_sims.R
 │   ├── Individual_movement_simulations.R
-│   └── readme
+│   └── landscape_sims.R
 │
 ├── Data
-│   ├── Afrotropical_bird.csv
-│   └── readme
+│   └── Afrotropical_bird.csv
 │
 ├── Data_derived
-│
+│  ├── start_pops.csv
+│  └── movement&behavior_estimates.csv
+│  └── frag_landscape_0.1_50.tif
 ├── Output
+│   └── mean_metrics.csv
 │
 └── README.md
 ```
